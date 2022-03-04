@@ -24,7 +24,16 @@ const Home = () => {
             <div className="col-12 d-flex justify-content-center">
                 <Link to="/register">
                 <button className="btn btn-danger" >
-                    ingresar
+                    Registrate
+                </button>
+                </Link>
+            </div>
+        </div>
+        <div className="row mt-3">
+            <div className="col-12 d-flex justify-content-center">
+                <Link to="/login">
+                <button className="btn btn-success" >
+                    Inicia sesion
                 </button>
                 </Link>
             </div>

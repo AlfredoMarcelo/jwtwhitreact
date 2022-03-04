@@ -5,6 +5,7 @@ import Home from "./views/Home"
 import Register from "./views/Register.jsx"
 import injectContext from "./store/appContext";
 import Login from "./views/Login";
+import Profile from "./views/Profile";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Route exact path="/" component={Home}/>
       <Route  path="/register" component={Register}/>
       <Route  path="/login" component={Login}/>
+      <Route path="/profile" component={Profile}/>
     </Switch>
 
     </BrowserRouter>
