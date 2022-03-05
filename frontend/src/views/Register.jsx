@@ -25,7 +25,7 @@ const Register = (props) => {
         password:""
       })
     }
-    
+    //CONSULTAR SOBRE RUTAS PRIVADAS Y COMO REDIRECCIONAR EN EL FRONT CUANDO NO ENTREGA EL TOKEN***********************
 
     return (
     <div className="container">

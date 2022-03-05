@@ -19,7 +19,7 @@ const Login = (props) => {
 
   const sendData = (event) => {
     event.preventDefault();
-    actions.login(data)
+    actions.login(data,history)
     setData({
       email: "",
       password: "",
@@ -36,10 +36,9 @@ const Login = (props) => {
   }
 
   useEffect(()=>{
-    if(store.authorized){
-      history.push("/")
-    }
-  })
+    if(store.athorized)history.push("/")
+  },[])
+
 
   return (
     <div className="container">

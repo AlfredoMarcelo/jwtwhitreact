@@ -9,7 +9,7 @@ export const getState = ({ getStore, getActions, setStore }) => {
     actions: {
 
 
-      isAuthenthicated: () => {
+      isAuthenthicated: () => { //cada vez que se recarge la página va a ejecutar la funcion isAuthenticated
         if (sessionStorage.getItem("isAuth")) {
           setStore({
             authorized: JSON.parse(sessionStorage.getItem("isAuth")),
@@ -53,7 +53,7 @@ export const getState = ({ getStore, getActions, setStore }) => {
 
           sessionStorage.setItem("isAuth", true);
           sessionStorage.setItem("userData", JSON.stringify(infoUser))
-          /* history.push("/") */
+          history.push("/")
           console.log(infoUser)
         }
 
@@ -62,14 +62,28 @@ export const getState = ({ getStore, getActions, setStore }) => {
             error: error.message
           })
         }
+      },
+      getProfile:()=>{
+        const {userData}=getStore();
+        const {access_token}=userData;
+        console.log(access_token)
+        fetch("http://127.0.0.1:5000/api/profile",{
+          method:"GET",
+          headers:{
+            "Content-type":"application/json",
+            "Authorization":"Bearer " //+ access_token AGREGAR ACCESS TOKEN, FUNCIONA
+          }
+        })
+          .then(resp => resp.json())
+          .then(data => console.log(data))
+          .catch((error) => setStore({error:error.message})) //PREGUNTAR COMO CONSEGUIR EL MSG DE JWT PARA PINTAR EN PROFILE
+         
+      },
+      logout:(history)=>{
+        sessionStorage.clear()
+        setStore({authorized:false, userData:[]})
 
-
-
-
-
-
-
-
+        history.push("/")
 
       }
       

@@ -14,7 +14,7 @@ const injectContext = PassedComponent => {
             })
         );
         useEffect(() => {
-            state.actions.isAuthenthicated()
+            state.actions.isAuthenthicated() //cada vez que se recarge la página va a ejecutar la funcion isAuthenticated
         }, []);
         return (
             <Context.Provider value={state}>
