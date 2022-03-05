@@ -86,9 +86,9 @@ const Login = (props) => {
               </button>
             </div>
           </form>
-          <button onClick={pintar}>PINTAR</button>
+          {/* <button onClick={pintar}>PINTAR</button>
           <p>{nombre}</p>
-          <p>{id}</p>
+          <p>{id}</p> */}
         </div>
       </div>
     </div>

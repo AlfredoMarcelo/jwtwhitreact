@@ -71,7 +71,7 @@ export const getState = ({ getStore, getActions, setStore }) => {
           method:"GET",
           headers:{
             "Content-type":"application/json",
-            "Authorization":"Bearer " //+ access_token AGREGAR ACCESS TOKEN, FUNCIONA
+            "Authorization":"Bearer " + access_token //AGREGAR ACCESS TOKEN, FUNCIONA
           }
         })
           .then(resp => resp.json())

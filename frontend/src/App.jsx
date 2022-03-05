@@ -6,9 +6,11 @@ import Register from "./views/Register.jsx"
 import injectContext from "./store/appContext";
 import Login from "./views/Login";
 import Profile from "./views/Profile";
+import Private from "./components/Private";
 
 
 function App() {
+
   return (
     <BrowserRouter>
     <Navbar/>
@@ -16,7 +18,8 @@ function App() {
       <Route exact path="/" component={Home}/>
       <Route  path="/register" component={Register}/>
       <Route  path="/login" component={Login}/>
-      <Route path="/profile" component={Profile}/>
+      {/* <Route path="/profile" component={Profile}/> */}
+      <Private path="/profile" component={()=> <Profile/>}/>
     </Switch>
 
     </BrowserRouter>
