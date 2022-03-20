@@ -1,4 +1,4 @@
-# Autenticación con React.js, Python y Flask
+# Autenticación con React.js, Python 🐍 y Flask
 _Aplicación que permite registrarse e iniciar sesión, cuidando las vistas privadas con la solicitud de autenticación mediante token._
 
 
