@@ -5,7 +5,6 @@ _Aplicación que permite registrarse e iniciar sesión, cuidando las vistas priv
 ## Construido con 🛠️
 
 * [HTML5](https://developer.mozilla.org/es/docs/Web/HTML) - Estructura del contenido Web.
-* [Css3](https://developer.mozilla.org/es/docs/Web/CSS) - Estilo para el documento.
 * [Javascript](https://www.javascript.com/) - Para la implementación de funciones en la aplicación.
 * [Python V3.10](https://www.python.org/) -  Implementación de Api y base de datos.
 * [React.js](https://es.reactjs.org/) - Implementación de la intefaz de usuario. 
